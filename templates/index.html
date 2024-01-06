@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<main>
+    <div id="mainLeft">
+        <!-- Insert your welcome text here -->
+    </div>
+    <div id='mainRight'>
+        <h1>Shop by category:</h1>
+        <div id='categorySelections'>
+            <!-- This for loop assumes that you are passing a list of category rows, retrieved from the database -->
+            {% for category in categories %}
+                <div class='category'>
+                    <!-- Insert a p element that contains a link with the categoryid as a GET parameter
+                    The category name should be what is displayed
+                    The general format should be
+                    <p><a href="">catname</a></p> -->
+
+                    <!-- Insert an a element that contains a link with the categoryid as a GET parameter
+                    It should display an img element that corresponds to the category.  The image file should be stored in the static folder.
+                    The general format should be
+                    <a href=""><img = "" alt = ""></a> -->
+
+                </div>
+            {%endfor%}
+
+        </div>
+    </div>
+</main>
+{% endblock %}

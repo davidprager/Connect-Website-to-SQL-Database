@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<main>
+    <section id="catLeft">
+        <!-- This for loop assumes that you are passing a list of category rows, retrieved from the database -->
+        {% for category in categories %}
+            <!-- Insert an if statement to check if the selectedCategory parameter is the same as the categoryId> -->
+
+                <!-- If so, use the selectedCategory class to style the category
+                     This should be a p element with the category name -->
+
+            {% else %}
+                <!-- Otherwise, use the notSelectedCategory class to style the category -->
+                <!-- This should be a elemnent conatining a link to the category page, containing the corresponding caegory -->
+
+            {% endif %}
+        {%endfor%}
+    </section>
+    <section id="catRight">
+        <!-- This for loop assumes that you are passing a list of book rows, retrieved from the database -->
+        {% for book in books %}
+                <div class='book'>
+                    <!-- Insert the book image stored in the static folder and the book as the alt text -->
+                    <div><img src='' alt=''/></div>
+                    <div class='bookDetailBox'>
+                        <!-- Insert the corresponding field into each of the following rows -->
+                        <p class='bookTitle'></p>
+                        <p class='bookDetail'>by </p>
+                        <p class='bookDetail'>ISBN: </p>
+                        <p class='bookPrice'>$</p>
+                            <a class='actionButton' href='#'>Add to cart</a>
+                        <!-- Insert the if statement such that if the ReadNow flag is set include the Read Now button-->
+                            {% %}
+                                <a class='actionButton' href='#'>Read Now</a>
+                            {% endif %}
+                    </div>
+                </div>
+            {%endfor%}
+
+    </section>
+</main>
+{% endblock %}
+

@@ -1,0 +1,309 @@
+/* Styles used on multiple pages */
+
+body {
+    max-width: 1160px;
+    font: 1em normal Arial, sans-serif;
+    color: #111111;
+}
+/* rules for the header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+/* rules for the center header */
+#searchBoxForm {
+    margin-top: 30px;
+    display: flex;
+}
+#searchBox {
+    height: 20px;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.dropdownSelect {
+    width: 189px;
+    padding: 5px;
+    background-color: #dd1d5e;
+    color: white;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    padding-top: 5px;
+    z-index: 1;
+    border-radius: 5px;
+    background-color: #dd1d5e;
+    text-align: center;
+}
+
+.dropdown:hover .dropdownContent {
+    display: block;
+}
+
+.dropdownContent a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdownContent a:hover {
+    color: #00aacc;
+    text-decoration: none;
+}
+
+/* rules for the right header */
+
+#rightHeader {
+    display: flex;
+    margin-top: 40px;
+}
+
+#cartCount{
+    width: 150px;
+    margin: 8px 0 0 10px;
+}
+
+.loginButton {
+    background-color: #dd1d5e;
+    width: 50px;
+    height: 30px;
+    margin: 4px auto 0 auto;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 8px;
+}
+
+.loginButton a{
+    color: white;
+    text-decoration: none;
+}
+.loginButton a:hover {
+    color: #00aacc;
+    text-decoration: none;
+}
+
+/* rules for the footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    margin-left: 10px;
+    padding: 15px 0;
+    font-size: 0.8em;
+}
+
+#footerLeft {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0 0 10px;
+    width: 300px;
+}
+
+#footerLeft a{
+    padding-top: 12px;
+}
+
+#footerRight {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+    width: 80px;
+}
+
+#notFoundMessage {
+    color: red;
+}
+
+.commandButton {
+    height: 30px;
+    width: 150px;
+    border-radius: 8px;
+    margin: 20px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #dd1d5e;
+    font-size: smaller;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+
+.submitButton {
+    height: 18px;
+    border-radius: 8px;
+    border: none;
+    margin: 6px 0 0 4px;
+    text-align: center;
+    background-color: #dd1d5e;
+    color: white;
+    font-size: 0.875em;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    margin: 5px 0 0 10px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+h1{
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+/* Styles only used on the index page */
+/* Styles used on the left hand Welcome text section */
+#mainLeft {
+    width: 550px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+#mainLeft p{
+    font-size: 120%;
+}
+
+.welcomeText {
+    max-width: 400px;
+}
+
+/* Styles used on the right hand Category section */
+#mainRight {
+    max-width: 600px;
+    border-left: 1px solid black;
+    padding: 20px 0;
+    background-color: #fff9fc;
+    text-align: center;
+}
+
+#categorySelections {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category {
+    width: 299px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 40px;
+    color: #dd1d5e;
+    font-weight: bold;
+}
+
+.category a{
+    text-decoration: none;
+}
+
+
+/* Styles used on the category page */
+/* Styles used for the left hand navigation section */
+
+#catLeft {
+    width: 500px;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.notSelectedCategory {
+    height: 30px;
+    width: 150px;
+    border-radius: 8px;
+    margin: 20px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #dd1d5e;
+}
+
+.notSelectedCategory a{
+
+    color: white;
+    font-size: smaller;
+    text-decoration: none;
+}
+
+.selectedCategory {
+    height: 30px;
+    width: 150px;
+    border: 1px solid #dd1d5e;
+    border-radius: 8px;
+    margin: 20px;
+    text-align: center;
+    line-height: 30px;
+    color: #dd1d5e;
+    font-size: smaller;
+}
+
+/* styles for the righthand section that shows all the books */
+
+#catRight {
+    padding: 20px 0 20px 30px;
+    box-shadow: inset 0 0 0 20px #fff9fc;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff9fc;
+}
+
+.book {
+    width: 350px;
+    margin: 30px;
+    display: flex;
+    background-color: white;
+}
+
+.bookDetailBox {
+    margin: 20px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.875em;
+}
+
+.bookTitle {
+    font-weight: bold;
+}
+
+.bookDetail {
+    margin-top: 4px;
+    font-size: 0.875em;
+}
+
+.bookPrice {
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+.actionButton {
+    height: 20px;
+    width: 70px;
+    border-radius: 8px;
+    margin-top: 4px;
+    line-height: 20px;
+    text-align: center;
+    background-color: #dd1d5e;
+    color: white;
+    font-size: 0.875em;
+    text-decoration: none;
+}

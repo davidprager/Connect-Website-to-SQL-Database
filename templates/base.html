@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Insert the name of your site   -->
+    <title></title>
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+  </head>
+  <body>
+    <header>
+      <div id="leftHeader">
+        <a href="{{ url_for('home')}}">
+          <!-- Insert an image file that should be in the static folder -->
+          <!-- Insert the name of your site as the alt text  -->
+          <img src="" alt="----- logo">
+        </a>
+      </div>
+      <div id="midHeader">
+        <form id='searchBoxForm' action="#" method="post">
+        <input id='searchBox' type='text' placeholder='Book Title Search' name="search">
+        <input id="searchIcon" type="image" src="static/images/misc/search-icon.png" alt="search icon">
+        </form>
+        <div class="dropdown">
+            <p class="dropdownSelect">Select Category</p>
+            <div class="dropdownContent">
+               <!-- This for looop assumes that you are passing a list of category rows, retrieved from the database -->
+               {% for category in categories %}
+                   <!-- Insert a p element that contains a link with the categoryid as a GET parameter
+                   The category name should be what is displayed
+                   The general format should be
+                   <p><a href="">catname</a></p>          -->
+              {%endfor%}
+            </div>
+        </div>
+      </div>
+      <div id="rightHeader">
+        <div id="cartIcon"><a href="#">
+                <img src="static/images/misc/cart-icon.jpg" alt="shopping cart icon"></a>
+        </div>
+        <div id='cartCount'>1 item</div>
+        <div class='loginButton'><a href='#'>login</a></div>
+
+      </div>
+  </header>
+    <main>{% block container %} {% endblock %}</main>
+  <footer>
+    <div id="footerLeft">
+      <!-- Insert the name of your site here-->
+      <p>&copy; </p>
+        <a href="#">Contact Us</a>
+        <a href="#">Directions</a>
+    </div>
+    <div id="footerRight">
+        <a href="#"><img src ="static/images/misc/facebook-icon.jpg" alt="Facebook"></a>
+        <a href="#"><img src ="static/images/misc/twitter-icon.jpg" alt ="Twitter"></a>
+    </div>
+  </footer>
+  </body>
+</html>
